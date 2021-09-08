@@ -1,0 +1,491 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.navigation{
+    background-color: #ffffff;
+    height: fit-content;
+    width: 100%;
+    
+}
+.navigation ul{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.response{
+    display: none;
+}
+.myNav{
+    display: flex;
+}
+
+ul li{
+    
+    list-style-type: none;
+    font-size: larger;
+}
+#logo img{
+    font-weight: 900;
+    width: 50px;
+    height: 50px;
+    margin-right: 150px;
+}
+
+.firstBtn,.login{
+    padding: 10px;
+    
+}
+.firstBtn button{
+    background-color: white;
+    padding: 5px;
+    font-weight: bolder;
+}
+.login button{
+    background-color: white;
+    padding: 5px;
+    border-style: none;
+    font-weight: bolder;
+}
+.thin{
+    font-weight: 200;
+    font-style: italic;
+}
+li a{
+    display: block;
+    font-weight: bolder;
+    padding: 15px;
+    color: black;
+    text-decoration: none;
+    
+}
+/* hover over the navbar */
+
+li a:hover{
+    color: rgb(47, 218, 166);
+}
+button:hover{
+    cursor: pointer;
+    color: rgb(47, 218, 166);
+}
+
+/* carousle */
+.carousle{
+    background:linear-gradient(rgb(47, 218, 166),rgb(88, 170, 88), rgb(94, 94, 238));
+    position: relative;
+    display: flex;
+    margin-top: 3rem;
+}
+
+/* rentals page defined here  */
+
+.rentals{
+height: 80vh;
+width: 50vw;
+padding: 5rem;
+margin-right: 10px;
+}
+/* page */
+.page{
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    border: 1px solid red;
+    background-color: white;
+    box-shadow: 10px 5px 15px 0px #555555;
+}
+.arrows{
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.subscription{
+    border: 1px solid yellow;
+    width: 30rem;
+    height: auto;
+    text-align: center;
+    border-radius: 16px;
+    padding: 20px;
+    cursor: pointer;
+}
+#btn3{
+    width: 100%;
+}
+#btn3 h1{
+    letter-spacing: .3rem;
+}
+#btn3 h5{
+    font-weight: 900;
+    font-size: larger;
+    opacity: .7;
+}
+
+
+
+
+/* images page is defined here */
+
+.images{
+    
+    height: 80vh;
+    width: 50vw;
+    padding: 5rem;
+
+}
+.mySlides{
+    display: none;
+}
+
+.images img{
+    
+    width: 100%;
+    height: 100%;
+}
+
+.carousle{
+    width:100%;
+    height:100%;
+    animation: myanimation 5s infinite;
+  }
+  
+  @keyframes myanimation {
+    100%{background:linear-gradient(rgb(47, 218, 166),green);}
+    /* /* 100%{background:linear-gradient(rgb(47, 218, 166),blue) ;} */
+    100%{background:linear-gradient(rgb(47, 218, 166),purple);} 
+    
+  }
+
+
+
+
+
+
+
+
+/* media queries */
+
+@media only screen and (max-width: 800px) {
+    .carousle{
+        display: inline-block;
+        width: 100vh;
+        height: auto;  
+    }
+    .rentals{
+        display: flex;
+        width: 100%;
+        
+        padding: 0px;
+    }
+    .images{
+        display: flex;
+        width: 100vh;
+        padding: 2px;
+    }
+
+/* navbar responsiveness css and correct it */
+
+        /* .myNav{
+            display: block;
+        } */
+        /* .response{
+            display: block;
+        }
+        .myNav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+          }
+          
+          .myNav li {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+          }
+          
+          .myNav li:hover {
+            color: #f1f1f1;
+          }
+          
+          .myNav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+          } */
+}
+
+
+
+/* login/signup form  */
+
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  .container {
+    padding: 16px;
+  }
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 30%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button (x) */
+  .close {
+      /* relative for making the close relative to it's container */
+    position: relative;
+    /* for having the close mark at right most of the container */
+    margin-left: 75%;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+  }
+
+
+  .carousel-inner{
+    
+    display: flex;
+    justify-content: space-around;
+    
+    width: fit-content;
+    
+    height: 30rem;
+  }
+  .item{
+    margin: auto;
+    align-items: center;
+   
+  }
+  
+  .img-responsive{
+    border-radius: 16px;
+    width: 40rem;
+    height: 20rem;
+  }
+
+.row{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.card{
+  width: 40rem;
+  height: 20rem;
+  position: relative;
+  box-shadow: 5px 10px 10px black;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+  .card img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: .6;
+  }
+  .heading{
+    color:white;
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    font-weight: bolder;
+    text-align: center;
+    z-index: 10;
+  }
+  .h{
+    position: absolute;
+    top: 40%;
+    color: white;
+    font-size: 1vw;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-weight: bolder;
+  }
+  
+  .news{
+    width: 15rem;
+    height: 10rem;
+    padding: 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  .news:hover{
+    border: 1px solid grey;
+  }
+
+  .contain{
+    width: 100%;
+    height: fit-content;
+    padding: 1rem;
+    background-color: rgba(202, 202, 202, 0.712);
+    box-shadow: 10px 5px 10px white;
+    
+  }
+  .journey{
+    width: 20rem;
+    height: 10rem;
+    border-radius: 50%;
+  }
+  .carousel-item{
+    width: 100%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;;
+  }
+
+  .last{
+    width: 100%;
+    height: fit-content;
+    padding: 1rem;
+    
+    background-color: rgb(124, 104, 104);
+  }
+  .last .col{
+    display: flex;
+    text-align: left;
+    justify-content: left;
+  }
+  .last .col a{
+    
+    color: white;
+    list-style-type: none;
+  }
+  .last .col a:hover{
+    color:rgb(47, 218, 166) ;
+    text-decoration: none;
+    list-style-type: none;
+  }
+  
+
+  /* social media  */
+  .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  .fa-google {
+    background: #dd4b39;
+    color: white;
+  }
+  
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+  
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  
+  #logo2{
+    width: 5rem;
+    height: 5rem;
+  }
+
+
+  
